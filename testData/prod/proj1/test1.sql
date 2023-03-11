@@ -1,0 +1,1 @@
+mycommand('{ table1 }')
