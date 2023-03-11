@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_administrator_stage__prep__health__pathways
+    description: "A starter dbt model"
+
+    tests:
+      - dbt_utils.unique_combination_of columns:
+          combination_of_columns:
+            - ind_id
+            - yearmonth
+
+    columns:
+      - name: current_database
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+      - name: segment_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
