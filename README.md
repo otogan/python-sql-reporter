@@ -7,7 +7,7 @@
 Example:
 
 ```shell
-python scan.py ./testData
+python scan.py ./testData ./output
 ```
 
 ## Dependencies

@@ -115,3 +115,5 @@ with open(csv_path, 'w', newline='') as csv_file:
     writer = csv.DictWriter(csv_file, fieldnames=csv_fields)
     writer.writeheader()
     writer.writerows(found_tables)
+
+    print('\ncreated output:', csv_path)
