@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: core_administrator_stage__health__pathways
+    description: "A starter dbt model"

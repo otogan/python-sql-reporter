@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: core_administrator_stage__health__pathways
+    description: "A starter dbt model"
+
+    tests:
+      - dbt_utils.unique_combination_of columns:
+          combination_of_columns:
+            - ind_id
+            - yearmonth

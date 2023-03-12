@@ -1,1 +1,0 @@
-mycommand('{ table1 }')
