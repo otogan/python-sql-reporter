@@ -19,7 +19,7 @@ if not(os.path.isdir(output_path)):
 
 main_paths = (
     ('marts', os.path.join(target_path, 'marts')),
-    ('preps', os.path.join(target_path, 'preps'))
+    ('prep', os.path.join(target_path, 'prep'))
     )
 
 # validate paths
