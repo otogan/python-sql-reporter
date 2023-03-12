@@ -97,7 +97,7 @@ for dir_name, main_path in main_paths:
 
 # add counts
 for table_dict in found_tables:
-    table_name = table_dict['table_name']
+    table_name = table_dict['ref']
     table_dict['refs_total'] = table_counts[table_name]['refcount']
     table_dict['tests_total'] = table_counts[table_name]['testcount']
     print('table dict:', table_dict)
