@@ -55,8 +55,8 @@ def scan_dir(main_path, main_dir):
                         table_counts[table_name]['testcount'] += 1
 
                     found_tables.append({
-                        'main_dir': main_dir,
-                        'table_name': table_name,
+                        'model': main_dir,
+                        'ref': table_name,
                         'sql_path': sql_file_path,
                         'has_test_in_yaml': has_test
                         })
@@ -102,7 +102,7 @@ for table_dict in found_tables:
     table_dict['tests_total'] = table_counts[table_name]['testcount']
     print('table dict:', table_dict)
 
-csv_fields = ['main_dir', 'table_name', 'refs_total', 'tests_total', 'sql_path', 'has_test_in_yaml']
+csv_fields = ['model', 'ref', 'refs_total', 'tests_total', 'sql_path', 'has_test_in_yaml']
 
 existing_csv_count = 0
 csv_root_path = os.path.join(output_path, 'scan_results')
