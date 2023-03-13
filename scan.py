@@ -59,7 +59,8 @@ def scan_dir(main_path, main_dir):
                         'ref': ref_name,
                         'ref_type': table_refs[ref_name],
                         'sql_path': sql_file_path,
-                        'has_test_in_yaml': has_test
+                        'has_test_in_yaml': has_test,
+                        'ref_count_in_sql': len(table_refs)
                         })
 
 
@@ -104,7 +105,7 @@ for table_dict in found_refs:
     table_dict['tests_total'] = ref_counts[table_name]['testcount']
     print('table dict:', table_dict)
 
-csv_fields = ['model', 'ref', 'ref_type', 'refs_total', 'tests_total', 'sql_path', 'has_test_in_yaml']
+csv_fields = ['model', 'ref', 'ref_type', 'refs_total', 'tests_total', 'sql_path', 'ref_count_in_sql', 'has_test_in_yaml']
 
 existing_csv_count = 0
 csv_root_path = os.path.join(output_path, 'scan_results')
